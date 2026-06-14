@@ -1,0 +1,21 @@
+{
+  "name": "pixi-skia-pdf",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Render a PIXI.Container with Skia (CanvasKit) and export it to vector PDF via the Skia PDF backend.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "canvaskit-wasm": "0.39.1",
+    "pixi.js-legacy": "7.2.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vite": "^5.2.0"
+  }
+}

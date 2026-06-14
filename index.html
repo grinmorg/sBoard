@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIXI → Skia → PDF</title>
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>PIXI → Skia → PDF</h1>
+      <p class="subtitle">
+        Один и тот же <code>PIXI.Container</code> отрисовывается средствами Pixi.js
+        и через собственную Skia-обёртку, затем экспортируется в векторный PDF.
+      </p>
+    </header>
+
+    <main class="app">
+      <aside class="controls">
+        <button id="btn-random" class="btn btn-primary">
+          Сгенерировать случайную линию/фигуру
+        </button>
+        <button id="btn-export" class="btn btn-primary">Экспорт в PDF</button>
+        <button id="btn-clear" class="btn">Очистить добавленные</button>
+        <p id="status" class="status"></p>
+      </aside>
+
+      <section class="canvases">
+        <figure class="canvas-card">
+          <figcaption>Канвас 1 — Pixi.js</figcaption>
+          <div id="pixi-host" class="canvas-host"></div>
+        </figure>
+
+        <figure class="canvas-card">
+          <figcaption>Канвас 2 — Skia (CanvasKit)</figcaption>
+          <canvas id="skia-canvas" class="canvas-host"></canvas>
+        </figure>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
